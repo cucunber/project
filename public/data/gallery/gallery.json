@@ -1,0 +1,16 @@
+{
+    "gallery": [
+        {
+            "src": "/assets/images/gallery/Remont-gruzovika.jpg",
+            "description": "Ремонт грузовика"
+        },
+        {
+            "src": "/assets/images/gallery/Remont-MAN-posle-DTP.jpg",
+            "description": "Ремонт MAN после ДТП"
+        },
+        {
+            "src": "/assets/images/gallery/Zamena-dloka-DVS-KAMAZ-Cummins.jpg",
+            "description": "Замена длока ДВС КАМАЗ Cummins"
+        }
+    ]
+}

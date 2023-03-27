@@ -1,0 +1,20 @@
+{
+  "services": [
+    {
+      "name": "Ремонт грузовиков",
+      "route": "/services/truck-repair"
+    },
+    {
+      "name": "Ремонт воздушных систем грузовика",
+      "route": "/services/air-system-repair"
+    },
+    {
+      "name": "Ремонт двигателей",
+      "route": "/services/engine-repair"
+    },
+    {
+      "name": "Ремонт ходовой системы",
+      "route": "/services/running-system-repair"
+    }
+  ]
+}
