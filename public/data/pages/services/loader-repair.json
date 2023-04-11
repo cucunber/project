@@ -1,0 +1,55 @@
+{
+    "content": [
+      {
+        "description": [
+          {
+            "type": "title",
+            "properties": {
+              "title": "РЕМОНТ И ОБСЛУЖИВАНИЕ ПОГРУЗЧИКОВ"
+            }
+          },
+          {
+              "type": "image",
+              "properties": {
+                  "src": "/assets/images/services/loader-repair.jpg",
+                  "alt": "loader repair",
+                  "height": "350px",
+                  "fit": "contain"
+              }
+          },
+          {
+              "type": "paragraph",
+              "properties": {
+                  "paragraph": "Осуществляет ремонт следующих марок:"
+              }
+          },
+          {
+              "type": "list",
+              "properties": {
+                  "elements": [
+                      {
+                          "type": "paragraph",
+                          "properties": {
+                              "paragraph": "BOBCAT"
+                          }
+                      },
+                      {
+                          "type": "paragraph",
+                          "properties": {
+                              "paragraph": "Locust"
+                          }
+                      },
+                      {
+                          "type": "paragraph",
+                          "properties": {
+                              "paragraph": "МКСМ"
+                          }
+                      }
+                  ]
+              }
+          }
+        ]
+      }
+    ]
+  }
+  

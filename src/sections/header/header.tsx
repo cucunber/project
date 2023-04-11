@@ -1,17 +1,43 @@
-import { Box, Container, Flex, Link, Spinner } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Drawer,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerOverlay,
+  Flex,
+  IconButton,
+  Link,
+  Spinner,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import { IHeader } from "./header.type";
 import { default as LinkNext } from "next/link";
 import { colors, container } from "@/constants";
-import { Fragment } from "react";
+import {
+  ComponentPropsWithoutRef,
+  Fragment,
+  useCallback,
+  useRef,
+  useState,
+} from "react";
 import { dataRoutes, IMenuResponse } from "@/data";
 import { defaultFetcher } from "@/utils";
 import useSWR from "swr";
 import { useRouter } from "next/router";
 import { Placement } from "../placement";
 import { Logo } from "@/components";
+import BurgerSVG from "./burger";
 
-function LinkElement({ route, name }: IHeader["options"][number]) {
+function LinkElement({
+  route,
+  name,
+  ...rest
+}: IHeader["options"][number] & ComponentPropsWithoutRef<"a">) {
   const router = useRouter();
+
+  const [isMobile] = useMediaQuery("(max-width: 1024px)");
 
   const isLinkActive =
     router.asPath === route ||
@@ -21,13 +47,14 @@ function LinkElement({ route, name }: IHeader["options"][number]) {
     <Link
       as={LinkNext}
       href={route}
+      {...rest}
       sx={{
         textDecoration: "none",
         color: isLinkActive ? colors.primary : colors.base,
         display: "inline-block",
         padding: "16px 32px",
         position: "relative",
-        fontSize: "18px",
+        fontSize: isMobile ? "24px" : "18px",
         _after: {
           content: '""',
           position: "absolute",
@@ -52,11 +79,84 @@ function LinkElement({ route, name }: IHeader["options"][number]) {
   );
 }
 
+function MobileMenu({ options }: Pick<IMenuResponse, "options">) {
+  const [open, setOpen] = useState(false);
+  const burgerButtonRef = useRef(null);
+
+  const handleClose = useCallback(() => {
+    setOpen(false);
+  }, []);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  return (
+    <>
+      <IconButton
+        aria-label="burger-button"
+        ref={burgerButtonRef}
+        onClick={handleOpen}
+      >
+        <BurgerSVG />
+      </IconButton>
+      <Drawer
+        isOpen={open}
+        onClose={handleClose}
+        finalFocusRef={burgerButtonRef}
+        size={["full", "full", "md"]}
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton
+            sx={{
+              width: "48px",
+              height: "48px",
+            }}
+          />
+          <Container
+            sx={{
+              height: "100%",
+            }}
+            maxW="300px"
+          >
+            <Flex
+              as="nav"
+              sx={{
+                height: "100%",
+                p: 2,
+              }}
+              align="center"
+              direction="column"
+              justify="center"
+            >
+              {options.map((option) => (
+                <Fragment key={option.route}>
+                  <LinkElement onClick={handleClose} {...option} />
+                </Fragment>
+              ))}
+              <Box
+                sx={{
+                  marginTop: "auto",
+                }}
+              >
+                <Placement />
+              </Box>
+            </Flex>
+          </Container>
+        </DrawerContent>
+      </Drawer>
+    </>
+  );
+}
+
 export function Header() {
   const { data, error } = useSWR<IMenuResponse>(
     dataRoutes.menu,
     defaultFetcher
   );
+
+  const [isMobile] = useMediaQuery("(max-width: 1024px)");
 
   if (error) return <div>Ошибка</div>;
   if (!data) return <Spinner />;
@@ -64,25 +164,34 @@ export function Header() {
   const { options } = data;
 
   return (
-    <Box as="header">
+    <Box
+      as="header"
+      sx={{
+        background: colors.color,
+        zIndex: 2,
+        ...(isMobile && { position: "sticky", top: 0 }),
+      }}
+    >
       <Container {...container}>
-        <Flex sx={{ padding: 2 }}>
+        <Flex align="center" sx={{ padding: 2 }}>
           <LinkNext href="/">
             <Logo />
           </LinkNext>
           <Box sx={{ marginLeft: "auto" }}>
-            <Placement />
+            {!isMobile ? <Placement /> : <MobileMenu options={options} />}
           </Box>
         </Flex>
-        <Container maxW="800px">
-          <Flex as="nav" align="center" justify="center">
-            {options.map((option) => (
-              <Fragment key={option.route}>
-                <LinkElement {...option} />
-              </Fragment>
-            ))}
-          </Flex>
-        </Container>
+        {!isMobile && (
+          <Container maxW="800px">
+            <Flex as="nav" align="center" justify="center">
+              {options.map((option) => (
+                <Fragment key={option.route}>
+                  <LinkElement {...option} />
+                </Fragment>
+              ))}
+            </Flex>
+          </Container>
+        )}
       </Container>
     </Box>
   );

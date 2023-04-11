@@ -18,7 +18,6 @@ export default function Content({
   services,
   content,
 }: InferGetServerSidePropsType<typeof getServerSideProps> & PropsWithChildren) {
-  console.log(content);
   return (
     <>
       <Head>

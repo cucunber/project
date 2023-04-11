@@ -5,14 +5,14 @@
         {
           "type": "title",
           "properties": {
-            "title": "РЕМОНТ ДВИГАТЕЛЕЙ"
+            "title": "РЕМОНТ И ОСБЛУЖИВАНИЕ ТРАКТОРА-ПОГРУЗЧИКА"
           }
         },
         {
           "type": "image",
           "properties": {
-            "src": "/assets/images/services/engine-repair.jpg",
-            "alt": "man engine",
+            "src": "/assets/images/services/tractor-loader-repair.jpg",
+            "alt": "tractor-loader repair",
             "height": "350px",
             "fit": "contain"
           }
@@ -30,37 +30,31 @@
               {
                 "type": "paragraph",
                 "properties": {
-                  "paragraph": "KUBOTA"
+                  "paragraph": "JCB"
                 }
               },
               {
                 "type": "paragraph",
                 "properties": {
-                  "paragraph": "DEUTZ"
+                  "paragraph": "TEREX"
                 }
               },
               {
                 "type": "paragraph",
                 "properties": {
-                  "paragraph": "HATZ"
+                  "paragraph": "KOMATSU"
                 }
               },
               {
                 "type": "paragraph",
                 "properties": {
-                  "paragraph": "YANMAR"
+                  "paragraph": "DAEWOO"
                 }
               },
               {
                 "type": "paragraph",
                 "properties": {
-                  "paragraph": "PERKINS"
-                }
-              },
-              {
-                "type": "paragraph",
-                "properties": {
-                  "paragraph": "CUMMINS"
+                  "paragraph": "МТЗ"
                 }
               }
             ]

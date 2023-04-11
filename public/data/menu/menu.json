@@ -9,20 +9,28 @@
       "route": "/services",
       "subRoutes": [
         {
-          "name": "Ремонт грузовиков",
-          "route": "/services/truck-repair"
+          "name": "Ремонт и обслуживание трактора-погрузчика",
+          "route": "/services/tractor-loader-repair"
         },
         {
-          "name": "Ремонт воздушных систем грузовика",
-          "route": "/services/air-system-repair"
+          "name": "Ремонт и обслуживание вилочных погрузчиков",
+          "route": "/services/fork-tractor-repair"
+        },
+        {
+          "name": "Ремонт и обслуживание грейдеров",
+          "route": "/services/grader-repair"
+        },
+        {
+          "name": "Ремонт и обслуживание  погрузчиков",
+          "route": "/services/loader-repair"
         },
         {
           "name": "Ремонт двигателей",
           "route": "/services/engine-repair"
         },
         {
-          "name": "Ремонт ходовой системы",
-          "route": "/services/running-system-repair"
+          "name": "Ремонт КПП, ведущих мостов",
+          "route": "/services/gearbox-repair"
         }
       ]
     },

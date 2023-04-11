@@ -1,97 +1,220 @@
 {
-    "prices": [
+  "prices": [
+    {
+      "group": {
+        "id": "tractor-loader",
+        "name": "Ремонт и обслуживание трактора - погрузчика"
+      },
+      "services": [
         {
-            "group": {
-                "id": "engine",
-                "name": "Двигатель"
-            },
-            "services": [
-                {
-                    "id": "1",
-                    "name": "С\\У двигателя",
-                    "price": {
-                        "from": "true",
-                        "amount": "20000"
-                    }
-                },
-                {
-                    "id": "2",
-                    "name": "Протяжка ГБЦ (к-т)",
-                    "price": {
-                        "from": "true",
-                        "amount": "6500"
-                    }
-                },
-                {
-                    "id": "3",
-                    "name": "Замена масла с заменой масляного фильтра",
-                    "price": {
-                        "amount": "2000"
-                    }
-                },
-                {
-                    "id": "4",
-                    "name": "С\\У компрессор",
-                    "price": {
-                        "amount": "5500"
-                    }
-                },
-                {
-                    "id": "5",
-                    "name": "С\\У насос ГУР с прокачкой",
-                    "price": {
-                        "amount": "5500"
-                    }
-                }
-            ]
+          "id": "1",
+          "name": "JCB",
+          "price": {
+            "from": true,
+            "amount": "30000"
+          }
         },
         {
-            "group": {
-                "id": "cooling-system",
-                "name": "Система охлаждения"
-            },
-            "services": [
-                {
-                    "id": "1",
-                    "name": "С\\У радиатор без снятия элементов кабины",
-                    "price": {
-                        "from": "true",
-                        "amount": "5500"
-                    }
-                },
-                {
-                    "id": "2",
-                    "name": "С\\У интеркуллер",
-                    "price": {
-                        "from": "true",
-                        "amount": "5500"
-                    }
-                },
-                {
-                    "id": "3",
-                    "name": "Замена охлаждающей жидкости",
-                    "price": {
-                        "from": "true",
-                        "amount": "2000"
-                    }
-                },
-                {
-                    "id": "4",
-                    "name": "С\\У термостата",
-                    "price": {
-                        "from": "true",
-                        "amount": "1500"
-                    }
-                },
-                {
-                    "id": "5",
-                    "name": "С\\У водяного насоса",
-                    "price": {
-                        "from": "true",
-                        "amount": "4500"
-                    }
-                }
-            ]
+          "id": "2",
+          "name": "TEREX",
+          "price": {
+            "from": true,
+            "amount": "30000"
+          }
+        },
+        {
+          "id": "3",
+          "name": "KOMATSU",
+          "price": {
+            "from": true,
+            "amount": "30000"
+          }
+        },
+        {
+          "id": "4",
+          "name": "DAEWOO",
+          "price": {
+            "from": true,
+            "amount": "30000"
+          }
+        },
+        {
+          "id": "5",
+          "name": "МТЗ",
+          "price": {
+            "from": true,
+            "amount": "30000"
+          }
         }
-    ]
+      ]
+    },
+    {
+      "group": {
+        "id": "grader",
+        "name": "Ремонт и осблуживание грейдеров"
+      },
+      "services": [
+        {
+          "id": "1",
+          "name": "Брянский Арсенал (ГС)",
+          "price": {
+            "from": true,
+            "amount": "50000"
+          }
+        },
+        {
+          "id": "2",
+          "name": "TEREX",
+          "price": {
+            "from": true,
+            "amount": "50000"
+          }
+        }
+      ]
+    },
+    {
+      "group": {
+        "id": "fork-tractor",
+        "name": "Ремонт и осблуживание вилочных погрузчиков"
+      },
+      "services": [
+        {
+          "id": "1",
+          "name": "TOYOTA",
+          "price": {
+            "from": true,
+            "amount": "15000"
+          }
+        },
+        {
+          "id": "2",
+          "name": "DOOSAN",
+          "price": {
+            "from": true,
+            "amount": "15000"
+          }
+        },
+        {
+          "id": "3",
+          "name": "JAC",
+          "price": {
+            "from": true,
+            "amount": "15000"
+          }
+        }
+      ]
+    },
+    {
+      "group": {
+        "id": "loader",
+        "name": "Ремонт и обслуживание погрузчиков"
+      },
+      "services": [
+        {
+          "id": "1",
+          "name": "BOBCAT",
+          "price": {
+            "from": true,
+            "amount": "20000"
+          }
+        },
+        {
+          "id": "2",
+          "name": "Locust",
+          "price": {
+            "from": true,
+            "amount": "20000"
+          }
+        },
+        {
+          "id": "3",
+          "name": "МКСМ",
+          "price": {
+            "from": true,
+            "amount": "20000"
+          }
+        }
+      ]
+    },
+    {
+      "group": {
+        "id": "engine",
+        "name": "Ремонт и двигателей"
+      },
+      "services": [
+        {
+          "id": "1",
+          "name": "KUBOTA",
+          "price": {
+            "from": true,
+            "amount": "60000"
+          }
+        },
+        {
+          "id": "2",
+          "name": "DEUTZ",
+          "price": {
+            "from": true,
+            "amount": "60000"
+          }
+        },
+        {
+          "id": "3",
+          "name": "HATZ",
+          "price": {
+            "from": true,
+            "amount": "60000"
+          }
+        },
+        {
+          "id": "4",
+          "name": "YANMAR",
+          "price": {
+            "from": true,
+            "amount": "60000"
+          }
+        },
+        {
+          "id": "5",
+          "name": "PERKINS",
+          "price": {
+            "from": true,
+            "amount": "60000"
+          }
+        },
+        {
+          "id": "6",
+          "name": "CUMMINS",
+          "price": {
+            "from": true,
+            "amount": "60000"
+          }
+        }
+      ]
+    },
+    {
+        "group": {
+          "id": "gearbox",
+          "name": "Ремонт КПП, ведущих мостов"
+        },
+        "services": [
+          {
+            "id": "1",
+            "name": "КПП",
+            "price": {
+              "from": true,
+              "amount": "20000"
+            }
+          },
+          {
+            "id": "2",
+            "name": "Ведущий мост",
+            "price": {
+              "from": true,
+              "amount": "20000"
+            }
+          }
+        ]
+      }
+  ]
 }

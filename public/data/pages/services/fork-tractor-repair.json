@@ -5,15 +5,15 @@
         {
           "type": "title",
           "properties": {
-            "title": "РЕМОНТ ДВИГАТЕЛЕЙ"
+            "title": "РЕМОНТ И ОБСЛУЖИВАНИЕ ВИЛОЧНЫХ ПОГРУЗЧИКОВ"
           }
         },
         {
           "type": "image",
           "properties": {
-            "src": "/assets/images/services/engine-repair.jpg",
-            "alt": "man engine",
-            "height": "350px",
+            "src": "/assets/images/services/fork-tractor-repair.jpg",
+            "alt": "fork tractor repair",
+            "height": "275px",
             "fit": "contain"
           }
         },
@@ -30,37 +30,19 @@
               {
                 "type": "paragraph",
                 "properties": {
-                  "paragraph": "KUBOTA"
+                  "paragraph": "TOYOTA"
                 }
               },
               {
                 "type": "paragraph",
                 "properties": {
-                  "paragraph": "DEUTZ"
+                  "paragraph": "DOOSAN"
                 }
               },
               {
                 "type": "paragraph",
                 "properties": {
-                  "paragraph": "HATZ"
-                }
-              },
-              {
-                "type": "paragraph",
-                "properties": {
-                  "paragraph": "YANMAR"
-                }
-              },
-              {
-                "type": "paragraph",
-                "properties": {
-                  "paragraph": "PERKINS"
-                }
-              },
-              {
-                "type": "paragraph",
-                "properties": {
-                  "paragraph": "CUMMINS"
+                  "paragraph": "JAC"
                 }
               }
             ]

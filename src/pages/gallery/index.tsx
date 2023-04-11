@@ -18,6 +18,7 @@ import {
   Card,
   CardBody,
   IconButton,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { Fragment, useCallback, useState } from "react";
@@ -34,11 +35,14 @@ function GalleryModal({
     onNext: () => void;
     onPrev: () => void;
   }) {
+  const [isMobile] = useMediaQuery("(max-width:769px)");
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
-      <ModalContent>
-        <ModalCloseButton sx={{ background: colors.color }} />
+      <ModalContent sx={{
+        maxWidth: isMobile ? '90%' : '50%',
+      }}>
+        <ModalCloseButton sx={{ background: colors.color, zIndex: 3 }} />
         <ModalBody
           sx={{
             padding: 4,

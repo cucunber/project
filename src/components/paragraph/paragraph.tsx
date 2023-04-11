@@ -1,10 +1,8 @@
 import { IParagraph } from "./paragraph.type";
-import { Text } from '@chakra-ui/react';
+import { Text } from '../text/text';
 
 export function Paragraph({ paragraph }: IParagraph){
     return (
-        <Text as="p" sx={{
-            fontSize: '16px',
-        }}>{paragraph}</Text>
+        <Text text={paragraph} />
     )
 }

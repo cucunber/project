@@ -1,0 +1,48 @@
+{
+  "content": [
+    {
+      "description": [
+        {
+          "type": "title",
+          "properties": {
+            "title": "РЕМОНТ И ОБСЛУЖИВАНИЕ ГРЕЙДЕРОВ"
+          }
+        },
+        {
+          "type": "image",
+          "properties": {
+            "src": "/assets/images/services/grader-repair.jpg",
+            "alt": "grader",
+            "height": "200px",
+            "fit": "contain"
+          }
+        },
+        {
+          "type": "paragraph",
+          "properties": {
+            "paragraph": "Осуществляет ремонт следующих марок:"
+          }
+        },
+        {
+          "type": "list",
+          "properties": {
+            "elements": [
+              {
+                "type": "paragraph",
+                "properties": {
+                  "paragraph": "Брянский Арсенал (ГС)"
+                }
+              },
+              {
+                "type": "paragraph",
+                "properties": {
+                  "paragraph": "TEREX"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

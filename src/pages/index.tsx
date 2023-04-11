@@ -1,4 +1,11 @@
-import { Box, VStack, Text, Container, Spacer } from "@chakra-ui/react";
+import {
+  Box,
+  VStack,
+  Text,
+  Container,
+  Spacer,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import Head from "next/head";
 import { Image, Title } from "@/components";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
@@ -20,6 +27,10 @@ export default function Home({
   services,
   mainServices,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  const [isMobile] = useMediaQuery("(max-width:769px)");
+
+  console.log(isMobile);
+
   return (
     <>
       <Head>
@@ -31,19 +42,15 @@ export default function Home({
       <VStack>
         <Box
           sx={{
-            height: "400px",
+            height: "100%",
             position: "relative",
             width: "100%",
+            background: "url(/assets/backgrounds/main.jpg)",
           }}
         >
-          <Image src="/assets/backgrounds/main.jpg" alt="background" />
           <Box
             sx={{
-              position: "absolute",
-              top: servicesPadding,
-              left: servicesPadding,
-              right: servicesPadding,
-              bottom: servicesPadding,
+              padding: servicesPadding,
             }}
           >
             <Container {...container}>
@@ -119,21 +126,29 @@ export default function Home({
         <YMaps query={{ lang: "en_RU" }}>
           <Map
             width="100%"
-            height="600px"
-            defaultState={{ center: [59.901459, 30.272354], zoom: 18 }}
+            height={isMobile ? "400px" : "600px"}
+            defaultState={{ center: [59.851101, 30.521924], zoom: 18 }}
           >
             <ZoomControl />
-            <Placemark geometry={[59.901459, 30.272354]} />
+            <Placemark geometry={[59.851101, 30.521924]} />
           </Map>
         </YMaps>
         <Box
-          sx={{
-            position: "absolute",
-            bottom: "-10px",
-            left: "50%",
-            transform: "translateX(-50%)",
-            width: "50%",
-          }}
+          sx={
+            isMobile
+              ? {
+                  position: 'relative',
+                  margin: 2,
+                  top: -10,
+                }
+              : {
+                  position: "absolute",
+                  bottom: "-10px",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  width: "50%",
+                }
+          }
         >
           <Mailer />
         </Box>

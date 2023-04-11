@@ -1,0 +1,23 @@
+{
+  "content": [
+    {
+      "description": [
+        {
+          "type": "title",
+          "properties": {
+            "title": "РЕМОНТ КПП и ведущих мостов"
+          }
+        },
+        {
+          "type": "image",
+          "properties": {
+            "src": "/assets/images/services/gearbox-repair.jpg",
+            "alt": "man engine",
+            "height": "350px",
+            "fit": "contain"
+          }
+        }
+      ]
+    }
+  ]
+}
