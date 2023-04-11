@@ -74,6 +74,8 @@ export default function PriceList({
                 query: { [priceQueryKeys.group]: id },
               }}
               sx={{
+                whiteSpace: 'wrap',
+                textAlign: 'center',
                 ...(router.query?.[priceQueryKeys.group] === id && {
                   background: colors.primary,
                 }),
